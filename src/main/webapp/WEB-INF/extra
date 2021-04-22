@@ -1,0 +1,17 @@
+<h3>Products:</h3>
+    <ol>
+        <c:forEach items="${categoryShow.products}" var="product">
+            <li>${product.name}</li>
+        </c:forEach>
+    </ol>
+
+    <form action="/addProductToCategory" method="post">
+        <input type="hidden" name="hiddenCategoryId" value="${categoryShow.id}">
+        <label>Select Products to add to the Category:</label>
+        <select name="selectedProduct">
+            <c:forEach items="${allProducts}" var="product">
+                <option value="${product.id}">${product.name}</option>
+            </c:forEach>
+        </select>
+        <input type="submit" value="Add">
+    </form>

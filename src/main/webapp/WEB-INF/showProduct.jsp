@@ -16,8 +16,28 @@
 
 <body>
     <div class="container">
-        <h1>show product!</h1>
+        <h1>${productShow.name}</h1>
     </div>
+    <h3>Categories:</h3>
+    <ol>
+        <c:forEach items="${productShow.categorys}" var="category">
+            <li>${category.name}</li>
+        </c:forEach>
+    </ol>
+
+    <form action="/addCategoryToProduct" method="post">
+        <input type="hidden" name="hiddenProductId" value="${productShow.id}">
+        <label>Select Categories to add to the Products:</label>
+        <select name="selectedCategory">
+            <c:forEach items="${allCategorys}" var="category">
+                <option value="${category.id}">${category.name}</option>
+            </c:forEach>
+        </select>
+        <input type="submit" value="Add">
+    </form>
+
 </body>
+
+</html>
 
 </html>

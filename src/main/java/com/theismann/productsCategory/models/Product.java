@@ -43,7 +43,7 @@ public class Product {
         joinColumns = @JoinColumn(name = "product_id"), 
         inverseJoinColumns = @JoinColumn(name = "category_id")
     )
-    private List<Category> categories;
+    private List<Category> categorys;
     
     public Product() {
         
@@ -104,12 +104,12 @@ public class Product {
 		this.updatedAt = updatedAt;
 	}
 
-	public List<Category> getCategories() {
-		return categories;
+	public List<Category> getCategorys() {
+		return categorys;
 	}
 
-	public void setCategories(List<Category> categories) {
-		this.categories = categories;
+	public void setCategorys(List<Category> categorys) {
+		this.categorys = categorys;
 	}
     
 	@PrePersist

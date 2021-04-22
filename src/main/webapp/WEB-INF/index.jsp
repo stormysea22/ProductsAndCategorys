@@ -16,7 +16,24 @@
 
 <body>
     <div class="container">
-        <h1>Hello World!</h1>
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <c:forEach items="${allProducts}" var="product">
+                    <tr>
+                        <td>${product.name}</td>
+                        <td>${product.description}</td>
+                        <td>${product.price}</td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
     </div>
 </body>
 

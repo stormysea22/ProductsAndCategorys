@@ -36,9 +36,8 @@ public class CategoryProduct {
         
     }
 
-	public CategoryProduct(Long id, Product product, Category category) {
+	public CategoryProduct(Product product, Category category) {
 		super();
-		this.id = id;
 		this.product = product;
 		this.category = category;
 	}
